@@ -2,7 +2,6 @@ import 'basiclightbox/dist/basicLightbox.min.css';
 import * as basicLightbox from 'basiclightbox';
 
 function onImgClick(event) {
-    // console.dir(event.target);
     if(event.target.tagName === "IMG") {
       const fullSizeImg = event.target.dataset.fullsize__img;
       const instance = basicLightbox.create(`

@@ -70,25 +70,6 @@ html {
 /*-------pagination----------*/
 
 
-/* #pagination {
+#pagination {
   display: none;
-} */
-
-
-/* .tui-ico-ellip {
-  display: none !important;
-} */
-
-  /* .tui-first-child {
-    display: none !important;
-  }
-  
-
-.tui-last-child {
-  display:none !important;
-} */
-
-/* .tui-first-child {display: none;}  */
-
-
-/* .tui-page-btn.tui-last-child {display: none;} */
+}
