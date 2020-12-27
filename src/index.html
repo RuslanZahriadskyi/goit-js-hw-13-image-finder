@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Webpack Starter Kit</title>
+  </head>
+
+  <body id="body">
+    <div class="form-container">
+      <form class="search-form" id="search-form">
+        <input
+          class="input"
+          type="text"
+          name="query"
+          autocomplete="off"
+          placeholder="Search images..."
+        />
+      </form>
+    </div>
+    <div class="gallery"></div>
+    <!-- <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled previous">
+          <a class="page-link" href="#" tabindex="-1" aria-disabled="true"
+            >Previous</a
+          >
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#" tabindex="+1">Next</a>
+        </li>
+      </ul>
+    </nav> -->
+    
+    <div id="pagination" class="tui tui tui-pagination"></div>
+    <template>
+      <div class="overflow-auto">
+        <b-pagination-nav :link-gen="linkGen" :number-of-pages="10" use-router></b-pagination-nav>
+      </div>
+    </template>
+    
+    
+  </body>
+  <script>
+ 
+  </script>
+</html>
