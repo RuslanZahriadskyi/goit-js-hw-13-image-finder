@@ -1,23 +1,24 @@
-import errorsNotifications from './notification'
+import errorsNotifications from './notification';
 
 const url = 'https://pixabay.com/api/';
 const apiKey = '19598883-8e8293d515495519269109cc8';
-
 
 export default {
   searchQuery: '',
   page: 1,
   perPage: 12,
+  totalItems: 0,
   fetchCard() {
     const search = `${url}?image_type=photo&q=${this.searchQuery}&page=${this.page}&per_page=${this.perPage}&orientation=horizontal&key=${apiKey}`;
 
     return fetch(search)
       .then(res => res.json())
-      .then(({ hits,totalHits }) => {
+      .then(({ hits, totalHits }) => {
+        this.totalItems = totalHits;
         if (hits.length === 0) {
-         throw new Error('Error feching data');
+          throw new Error('Error feching data');
         }
-        return {hits, totalHits}
+        return { hits, page: this.page };
       })
       .catch(error => {
         errorsNotifications(
@@ -32,11 +33,11 @@ export default {
   },
 
   get newPage() {
-    return this.page
+    return this.page;
   },
 
   set newPage(value) {
-    this.page = value
+    this.page = value;
   },
 
   get query() {
